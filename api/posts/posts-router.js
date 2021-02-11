@@ -18,15 +18,7 @@ router.get('/', (req, res, next) => {
 router.get('/:id', mw.validatePostId, (req, res, next) => {
   // RETURN THE POST OBJECT
   // this needs a middleware to verify post id
-  const { id } = req.params;
-
-  Posts.getById(id)
-  .then((posts) => {
-    res.status(200).json(posts)
-  })
-  .catch(error => {
-    next(error)
-  })
+  res.status(200).json(req.post)
 });
 
 // do not forget to export the router
