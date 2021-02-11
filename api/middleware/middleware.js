@@ -32,7 +32,7 @@ const validateUserId = async (req, res, next) => {
 const validateUser = async (req, res, next) => {
   // do your magic!
   const user = req.body
-  if (!user){
+  if (user.name === undefined){
     res.status(400).json({message: 'missing user data'})
   } else {
     if (!user.name){
@@ -45,7 +45,7 @@ const validateUser = async (req, res, next) => {
 
 const validatePost = async (req, res, next) => {
   // do your magic!
-  if (!req.body){
+  if (req.body.text === undefined){
     res.status(400).json({message: 'missing post data'})
   } else {
     if (!req.body.text){ 
