@@ -2,13 +2,10 @@
     "name": "node-api3-project",
     "version": "1.0.0",
     "scripts": {
-        "dev": "react-scripts start",
-        "start": "serve -s build",
-        "build": "react-scripts build",
-        "test": "react-scripts test --env=jsdom",
-        "eject": "react-scripts eject",
-        "heroku-postbuild": "npm run build"
-        },
+        "start": "node index.js",
+        "server": "nodemon index.js"
+        
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/LambdaSchool/node-api3-project.git"
