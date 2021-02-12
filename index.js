@@ -1,6 +1,11 @@
+// new imports
+require('dotenv').config()
+
 // require your server and launch it
 const server = require('./api/server')
 
-server.listen(1213, () => {
-    console.log(`server listening on 1213`)
+const port = process.env.PORT || 1213;
+
+server.listen(port, () => {
+    console.log(`server listening on ${port}`)
 })
