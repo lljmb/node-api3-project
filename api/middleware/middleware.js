@@ -1,6 +1,6 @@
 const Users = require('../users/users-model')
 const Posts = require('../posts/posts-model')
-const { post } = require('../server')
+
 
 function logger(req, res, next) {
   // do your magic!

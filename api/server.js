@@ -9,9 +9,10 @@ const mw = require('./middleware/middleware');
 
 const server = express();
 
-server.use(cors())
+
 // remember express by default cannot parse JSON in request bodies
 server.use(helmet());
+server.use(cors())
 server.use(express.json(), morgan('dev'));
 
 // global middlewares and routes need to be connected here
