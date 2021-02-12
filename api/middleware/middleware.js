@@ -6,7 +6,7 @@ function logger(req, res, next) {
   // do your magic!
   console.log(`****Logger****
     Method: ${req.method}
-    URL: http://localhost:1213${req.url} 
+    URL: http://localhost:${req.url} 
     Timestamp: ` + new Date())
   next()
 }
