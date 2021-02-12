@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const helmet = require('helmet');
+const cors = require('cors');
 
 const usersRouter = require('./users/users-router');
 const postsRouter = require('./posts/posts-router');
@@ -8,6 +9,7 @@ const mw = require('./middleware/middleware');
 
 const server = express();
 
+server.use(cors())
 // remember express by default cannot parse JSON in request bodies
 server.use(helmet());
 server.use(express.json(), morgan('dev'));
